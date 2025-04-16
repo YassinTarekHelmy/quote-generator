@@ -79,3 +79,32 @@ h1{
     grid-column: 2/4;
     grid-row: 1;
 }
+
+/* Add these styles to your App.css */
+
+.social-share {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* This adds space between buttons */
+    margin: 10px 0; /* Adds vertical spacing */
+  }
+  
+  .social-share span {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .social-share a {
+    display: inline-block;
+    transition: transform 0.2s ease;
+  }
+  
+  .social-share a:hover {
+    transform: scale(1.1);
+  }
+  
+  .icon {
+    width: 32px; /* Increased from 24px */
+    height: 32px; /* Increased from 24px */
+    object-fit: contain;
+  }

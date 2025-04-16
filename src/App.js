@@ -31,6 +31,54 @@ const App = () => {
         <span>{quote.author}</span>
         <div className="btns">
           <button onClick={copy} className="btn">Copy</button>
+          <div className="social-share">
+					<span>Share:</span>
+					<a
+						href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
+							`"${quote.content}" — ${quote.author}`
+						)}`}
+						target="_blank"
+						rel="noopener noreferrer"
+						title="Share on WhatsApp"
+					>
+						<img
+              className='icon'
+							src="https://img.icons8.com/ios-filled/24/25D366/whatsapp.png"
+							alt="WhatsApp"
+						/>
+					</a>
+					<a
+						href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+							`"${quote.content}" — ${quote.author}`
+						)}`}
+						target="_blank"
+						rel="noopener noreferrer"
+						title="Share on Twitter"
+					>
+						<img
+              className="icon"
+							src="https://img.icons8.com/ios-filled/24/1DA1F2/twitter.png"
+							alt="Twitter"
+						/>
+					</a>
+					<a
+						href={`https://t.me/share/url?url=${encodeURIComponent(
+							``
+            )}
+            &text=${encodeURIComponent(
+				`"${quote.content}" — ${quote.author}`
+			)}`}
+						target="_blank"
+						rel="noopener noreferrer"
+						title="Share on Telegram"
+					>
+						<img
+              className="icon"
+							src="https://img.icons8.com/ios-filled/24/0088cc/telegram-app.png"
+							alt="Telegram"
+						/>
+					</a>
+				</div>
           <button onClick={generateQuote}>Generate Another Quote</button>
         </div>
       </div>
